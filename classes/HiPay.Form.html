@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HiPay.Form - hipay-fullservice-sdk-js</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/css/custom.css">
+    <link rel="stylesheet" href="../assets/css/lucid.css">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-skin-sam">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <h1 class="brand" style="padding: 10px 16px 10px; height: 20px; line-height: 20px; margin-left: 0;">
+            hipay-fullservice-sdk-js
+        </h1>
+	<div class="nav">
+            <li class="divider-vertical"></li>
+            <li>
+                <p class="navbar-text">
+                    API Docs for Version: <b>1.0.3</b>
+                </p>
+            </li>
+        </div>
+        <form class="navbar-form pull-right" style="line-height: 40px; height: 40px;">
+            <input style="margin-top: 0;" type="text" class="search-query" placeholder="Search for classes/modules..." data-obj='["classes/HiPay", "classes/HiPay.Form"]'>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="span3">
+<div>
+    <div id="sidebar">
+    <div id="classes">
+        <ul id="api-classes" class="nav nav-list">
+                <li><a href="../classes/HiPay.html">HiPay</a></li>
+                <li><a href="../classes/HiPay.Form.html">HiPay.Form</a></li>
+        </ul>
+    </div>
+    </div>
+</div>
+        </div>
+        <div class="span9">
+    <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<div class="page-header">
+    <h1>HiPay.Form</h1>
+</div>
+
+
+
+
+
+
+
+<!-- table of contents -->
+
+<div id="class-toc" class="page-section">
+	<h2>Table of Contents</h2>
+    <ul>
+		<li>
+			<strong>Methods</strong>
+			<ul>
+				<li><a href="#method-HiPay.Form.change"><span class="im">HiPay.Form.change</span>()</a></li>
+				<li><a href="#method-HiPay.Form.CVVHelpText"><span class="im">HiPay.Form.CVVHelpText</span>()</a></li>
+				<li><a href="#method-HiPay.Form.paymentFormDataGetErrors"><span class="im">HiPay.Form.paymentFormDataGetErrors</span>()</a></li>
+				<li><a href="#method-HiPay.Form.paymentFormDataIsValid"><span class="im">HiPay.Form.paymentFormDataIsValid</span>()</a></li>
+				<li><a href="#method-HiPay.Form.tokenizePaymentFormData"><span class="im">HiPay.Form.tokenizePaymentFormData</span>()</a></li>
+				<li><a href="#method-HiPay.getCVVInformation"><span class="im">HiPay.getCVVInformation</span>()</a></li>
+				<li><a href="#method-HiPay.tokenize"><span class="im">HiPay.tokenize</span>(<span class="ia">cardNumber</span><span class="ia">expiryMonth</span><span class="ia">expiryYear</span><span class="ia">cardHolder</span><span class="ia">cvv</span><span class="ia">multiUse</span><span class="ia">generateRequestId</span>)</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<strong>Properties</strong>
+			<ul>
+				<li><a href="#prop-publicKey"><span class="ip">publicKey</span></a></li>
+				<li><a href="#prop-target"><span class="ip">target</span></a></li>
+				<li><a href="#prop-username"><span class="ip">username</span></a></li>
+			</ul>
+		</li>
+
+		<li>
+			<strong>Attributes</strong>
+			<ul>
+				<li><a href="#attr-HiPay.Form.locale"><span class="iattr">HiPay.Form.locale</span></a></li>
+			</ul>
+		</li>
+
+	</ul>
+</div>
+
+<!-- details -->
+
+
+    <div id="methods" class="page-section">
+        <h2 class="off-left">Methods</h2>
+        <div class="item-list">
+<div id="method-HiPay.Form.change" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>HiPay.Form.change</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/dist_hipay-fullservice-sdk-2.js.html#l9738"><code>dist&#x2F;hipay-fullservice-sdk-2.js:9738</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Callback on form change</p>
+</div>
+
+
+
+</div>
+<div id="method-HiPay.Form.CVVHelpText" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>HiPay.Form.CVVHelpText</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/dist_hipay-fullservice-sdk-2.js.html#l10817"><code>dist&#x2F;hipay-fullservice-sdk-2.js:10817</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Helper to display CVV information</p>
+</div>
+
+
+
+</div>
+<div id="method-HiPay.Form.paymentFormDataGetErrors" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>HiPay.Form.paymentFormDataGetErrors</code></span>
+
+		<span class="paren">()</span>
+		<span class="returns-inline">
+			<span class="type"></span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/dist_hipay-fullservice-sdk-2.js.html#l9664"><code>dist&#x2F;hipay-fullservice-sdk-2.js:9664</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Get errors in form</p>
+</div>
+
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+					<p>errorCollection</p>
+
+			</div>
+		</div>
+
+</div>
+<div id="method-HiPay.Form.paymentFormDataIsValid" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>HiPay.Form.paymentFormDataIsValid</code></span>
+
+		<span class="paren">()</span>
+		<span class="returns-inline">
+			<span class="type">Boolean</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/dist_hipay-fullservice-sdk-2.js.html#l9749"><code>dist&#x2F;hipay-fullservice-sdk-2.js:9749</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Is valid form data.</p>
+</div>
+
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Boolean</span>:
+					<p>Form is or is not valid</p>
+
+			</div>
+		</div>
+
+</div>
+<div id="method-HiPay.Form.tokenizePaymentFormData" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>HiPay.Form.tokenizePaymentFormData</code></span>
+
+		<span class="paren">()</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/dist_hipay-fullservice-sdk-2.js.html#l10832"><code>dist&#x2F;hipay-fullservice-sdk-2.js:10832</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Tokenize form data.</p>
+</div>
+
+
+
+</div>
+<div id="method-HiPay.getCVVInformation" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>HiPay.getCVVInformation</code></span>
+
+		<span class="paren">()</span>
+		<span class="returns-inline">
+			<span class="type">Object</span>
+		</span>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/dist_hipay-fullservice-sdk-2.js.html#l9646"><code>dist&#x2F;hipay-fullservice-sdk-2.js:9646</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>CVV information by card (name and length of CVV)</p>
+</div>
+
+
+		<div class="returns">
+			<h4>Returns:</h4>
+
+			<div class="returns-description">
+						<span class="type">Object</span>
+			</div>
+		</div>
+
+</div>
+<div id="method-HiPay.tokenize" class="method item">
+	<div class="method-signature">
+	<span class="name"><code>HiPay.tokenize</code></span>
+
+		<div class="args">
+			<span class="paren">(</span><ul class="args-list inline commas">
+				<li class="arg">
+						<code>cardNumber</code>
+				</li>
+				<li class="arg">
+						<code>expiryMonth</code>
+				</li>
+				<li class="arg">
+						<code>expiryYear</code>
+				</li>
+				<li class="arg">
+						<code>cardHolder</code>
+				</li>
+				<li class="arg">
+						<code>cvv</code>
+				</li>
+				<li class="arg">
+						<code>multiUse</code>
+				</li>
+				<li class="arg">
+						<code>generateRequestId</code>
+				</li>
+			</ul><span class="paren">)</span>
+		</div>
+	</div>
+
+
+
+
+
+
+	<div class="meta">
+				<p>
+				Defined in
+		<a href="../files/dist_hipay-fullservice-sdk-2.js.html#l10725"><code>dist&#x2F;hipay-fullservice-sdk-2.js:10725</code></a>
+		</p>
+
+
+
+	</div>
+
+	<div class="description"><p>Get a token with credit card information.</p>
+</div>
+
+		<div class="params">
+			<h4>Parameters:</h4>
+
+			<ul class="params-list">
+				<li class="param">
+						<code class="param-name">cardNumber</code>
+						<span class="type">String</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">expiryMonth</code>
+						<span class="type">String</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">expiryYear</code>
+						<span class="type">String</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">cardHolder</code>
+						<span class="type">String</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">cvv</code>
+						<span class="type">String</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">multiUse</code>
+						<span class="type">Boolean</span>
+
+
+
+				</li>
+				<li class="param">
+						<code class="param-name">generateRequestId</code>
+						<span class="type">Boolean</span>
+
+
+
+				</li>
+			</ul>
+		</div>
+
+
+</div>
+        </div>
+    </div>
+
+    <div id="properties" class="page-section">
+        <h2 class="off-left">Properties</h2>
+
+        <div class="item-list">
+<div id="prop-publicKey" class="property item">
+    <h3 class="name"><code>publicKey</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/dist_hipay-fullservice-sdk-2.js.html#l7350"><code>dist&#x2F;hipay-fullservice-sdk-2.js:7350</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The user public key. You must provide this value in order to be able to make API calls.</p>
+
+    </div>
+
+
+
+</div>
+<div id="prop-target" class="property item">
+    <h3 class="name"><code>target</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/dist_hipay-fullservice-sdk-2.js.html#l7329"><code>dist&#x2F;hipay-fullservice-sdk-2.js:7329</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The target type stage or production to make API calls in stage or production.</p>
+
+    </div>
+
+        <p><strong>Default:</strong> &quot;production&quot;</p>
+
+        <div class="example">
+            <h4>Example:</h4>
+
+            <div class="example-content">
+                <p>HiPay.target = "stage";</p>
+
+            </div>
+        </div>
+
+</div>
+<div id="prop-username" class="property item">
+    <h3 class="name"><code>username</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/dist_hipay-fullservice-sdk-2.js.html#l7341"><code>dist&#x2F;hipay-fullservice-sdk-2.js:7341</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The username. You must provide this value in order to be able to make API calls.</p>
+
+    </div>
+
+
+
+</div>
+        </div>
+    </div>
+
+    <div id="attrs" class="page-section">
+        <h2 class="off-left">Attributes</h2>
+
+<div id="attr-HiPay.Form.locale" class="attr item">
+    <a name="config_HiPay.Form.locale"></a> 
+    <h3 class="name"><code>HiPay.Form.locale</code></h3>
+    <span class="type"></span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/dist_hipay-fullservice-sdk-2.js.html#l6970"><code>dist&#x2F;hipay-fullservice-sdk-2.js:6970</code></a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Locale fr_FR ...</p>
+
+    </div>
+
+
+
+</div>
+    </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/yuidoc-bootstrap.js"></script>
+<script>prettyPrint();</script>
+</body>
+</html>

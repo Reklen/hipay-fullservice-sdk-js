@@ -1,0 +1,603 @@
+{
+    "project": {
+        "name": "hipay-fullservice-sdk-js",
+        "description": "The HiPay Fullservice SDK for JavaScript allows you to tokenize credit or debit cards against the HiPay Fullservice payment platform. This method allows you to offer a unified payment workflow to your customer. The SDK leverages the Direct Post method and is fully PCI compliant.",
+        "version": "1.0.3",
+        "url": "https://developer.hipay.com/doc/hipay-fullservice-sdk-js/"
+    },
+    "files": {
+        "dist/hipay-fullservice-sdk-2.js": {
+            "name": "dist/hipay-fullservice-sdk-2.js",
+            "modules": {},
+            "classes": {
+                "HiPay": 1,
+                "HiPay.Form": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "HiPay": {
+            "name": "HiPay",
+            "shortname": "HiPay",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 6953,
+            "description": "HiPay Fullservice library",
+            "params": [
+                {
+                    "name": "HiPay",
+                    "description": "",
+                    "type": "HiPay"
+                }
+            ]
+        },
+        "HiPay.Form": {
+            "name": "HiPay.Form",
+            "shortname": "HiPay.Form",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 6964
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 67,
+            "description": "Created by jkurc on 28/07/17.",
+            "class": "HiPay"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 997,
+            "description": "bluebird build version 3.5.0\nFeatures enabled: core, race, call_get, generators, map, nodeify, promisify, props, reduce, settle, some, using, timers, filter, any, each",
+            "class": "HiPay"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 6970,
+            "description": "Locale fr_FR ...",
+            "itemtype": "attribute",
+            "name": "HiPay.Form.locale",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 7235,
+            "description": "dump",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 7329,
+            "description": "The target type stage or production to make API calls in stage or production.",
+            "itemtype": "property",
+            "name": "target",
+            "default": "\"production\"",
+            "type": "string",
+            "example": [
+                "\n   HiPay.target = \"stage\";"
+            ],
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 7341,
+            "description": "The username. You must provide this value in order to be able to make API calls.",
+            "itemtype": "property",
+            "name": "username",
+            "type": "string",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 7350,
+            "description": "The user public key. You must provide this value in order to be able to make API calls.",
+            "itemtype": "property",
+            "name": "publicKey",
+            "type": "string",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 7979,
+            "params": [
+                {
+                    "name": "errorCollection",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "}"
+            },
+            "is_constructor": 1,
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 8979,
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 8984,
+            "access": "private",
+            "tagname": "",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 9025,
+            "params": [
+                {
+                    "name": "idElement",
+                    "description": ""
+                },
+                {
+                    "name": "s",
+                    "description": ""
+                },
+                {
+                    "name": "fn",
+                    "description": ""
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 9043,
+            "params": [
+                {
+                    "name": "idElement",
+                    "description": ""
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 9605,
+            "return": {
+                "description": "}",
+                "type": "Card_number, card_expiry_month: string, card_expiry_year: string, card_holder, cvv, multi_use: string, generate_request_id: string"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 9640,
+            "return": {
+                "description": "}",
+                "type": "Type: *, length: *"
+            },
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 9646,
+            "description": "CVV information by card (name and length of CVV)",
+            "itemtype": "method",
+            "name": "HiPay.getCVVInformation",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 9664,
+            "description": "Get errors in form",
+            "itemtype": "method",
+            "name": "HiPay.Form.paymentFormDataGetErrors",
+            "return": {
+                "description": "errorCollection"
+            },
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 9738,
+            "description": "Callback on form change",
+            "itemtype": "method",
+            "name": "HiPay.Form.change",
+            "parameter": "{function} callback",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 9749,
+            "description": "Is valid form data.",
+            "itemtype": "method",
+            "name": "HiPay.Form.paymentFormDataIsValid",
+            "return": {
+                "description": "Form is or is not valid",
+                "type": "Boolean"
+            },
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 9779,
+            "params": [
+                {
+                    "name": "instance",
+                    "description": ""
+                },
+                {
+                    "name": "payload",
+                    "description": ""
+                },
+                {
+                    "name": "specialValueCallback",
+                    "description": ""
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 9887,
+            "type": "{{APIIncorrectCredentials: number, APIIncorrectSignature: number, APIAccountNotActive: number, APIAccountLocked: number, APIInsufficientPermissions: number, APIForbiddenAccess: number, APIUnsupportedVersion: number, APITemporarilyUnavailable: number, APINotAllowed: number, APIMethodNotAllowedGateway: number, APIInvalidParameter: number, APIMethodNotAllowedSecureVault: number, APIInvalidCardToken: number, APIRequiredParameterMissing: number, APIInvalidParameterFormat: number, APIInvalidParameterLength: number, APIInvalidParameterNonAlpha: number, APIInvalidParameterNonNum: number, APIInvalidParameterNonDecimal: number, APIInvalidDate: number, APIInvalidTime: number, APIInvalidIPAddress: number, APIInvalidEmailAddress: number, APIInvalidSoftDescriptorCodeMessage: number, APINoRouteToAcquirer: number, APIUnsupportedECIDescription: number, APIUnsupported: number, APIUnknownOrder: number, APIUnknownTransaction: number, APIUnknownMerchant: number, APIUnsupportedOperation: number, APIUnknownIPAddress: number, APISuspicionOfFraud: number, APIFraudSuspicion: number, APIUnknownToken: number, APILuhnCheckFailed: number, APIUnsupportedCurrency: number, APIAmountLimitExceeded: number, APIMaxAttemptsExceeded: number, APIDuplicateOrder: number, APICheckoutSessionExpired: number, APIOrderCompleted: number, APIOrderExpired: number, APIOrderVoided: number, APIAuthorizationExpired: number, APIAllowableAmountLimitExceeded: number, APINotEnabled: number, APINotAllowedCapture: number, APINotAllowedPartialCapture: number, APIPermissionDenied: number, APICurrencyMismatch: number, APIAuthorizationCompleted: number, APINoMore: number, APIInvalidAmount: number, APIAmountLimitExceededCapture: number, APIAmountLimitExceededPartialCapture: number, APIOperationNotPermittedClosed: number, APIOperationNotPermittedFraud: number, APIRefundNotEnabled: number, APIRefundNotAllowed: number, APIPartialRefundNotAllowed: number, APIRefundPermissionDenied: number, APIRefundCurrencyMismatch: number, APIAlreadyRefunded: number, APIRefundNoMore: number, APIRefundInvalidAmount: number, APIRefundAmountLimitExceeded: number, APIRefundAmountLimitExceededPartial: number, APIOperationNotPermitted: number, APITooLate: number, APIReauthorizationNotEnabled: number, APIReauthorizationNotAllowed: number, APICannotReauthorize: number, APIMaxLimitExceeded: number, APIVoidNotAllowed: number, APICannotVoid: number, APIAuthorizationVoided: number, APIDeclinedAcquirer: number, APIDeclinedFinancialInstituion: number, APIInsufficientFundsAccount: number, APITechnicalProblem: number, APICommunicationFailure: number, APIAcquirerUnavailable: number, APIDuplicateTransaction: number, APIPaymentCancelledByTheCustomer: number, APIInvalidTransaction: number, APIPleaseCallTheAcquirerSupportCallNumber: number, APIAuthenticationFailedPleaseRetryOrCancel: number, APINoUIDConfiguredForThisOperation: number, APIRefusalNoExplicitReason: number, APIIssuerNotAvailable: number, APIInsufficientFundsCredit: number, APITransactionNotPermitted: number, APIInvalidCardNumber: number, APIUnsupportedCard: number, APICardExpired: number, APIExpiryDateIncorrect: number, APICVCRequired: number, APICVCError: number, APIAVSFailed: number, APIRetainCard: number, APILostOrStolenCard: number, APIRestrictedCard: number, APICardLimitExceeded: number, APICardBlacklisted: number, APIUnauthorisedIPAddressCountry: number, APICardnotInAuthorisersDatabase: number}}",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10009,
+            "params": [
+                {
+                    "name": "responseJSON",
+                    "description": ""
+                }
+            ],
+            "is_constructor": 1,
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10036,
+            "is_constructor": 1,
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10044,
+            "params": [
+                {
+                    "name": "context",
+                    "description": ""
+                },
+                {
+                    "name": "payload",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10059,
+            "params": [
+                {
+                    "name": "target",
+                    "description": ""
+                }
+            ],
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10068,
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10076,
+            "params": [
+                {
+                    "name": "username",
+                    "description": ""
+                },
+                {
+                    "name": "publicKey",
+                    "description": ""
+                }
+            ],
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10180,
+            "params": [
+                {
+                    "name": "endpoint",
+                    "description": ""
+                },
+                {
+                    "name": "requestParams",
+                    "description": ""
+                },
+                {
+                    "name": "returnPromise",
+                    "description": ""
+                },
+                {
+                    "name": "checkKey",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Promise"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10622,
+            "params": [
+                {
+                    "name": "data",
+                    "description": ""
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10654,
+            "params": [
+                {
+                    "name": "code",
+                    "description": ""
+                },
+                {
+                    "name": "message",
+                    "description": ""
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10674,
+            "params": [
+                {
+                    "name": "errorCollection",
+                    "description": ""
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10725,
+            "description": "Get a token with credit card information.",
+            "itemtype": "method",
+            "name": "HiPay.tokenize",
+            "params": [
+                {
+                    "name": "cardNumber",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "expiryMonth",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "expiryYear",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "cardHolder",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "cvv",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "multiUse",
+                    "description": "",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "generateRequestId",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10807,
+            "params": [
+                {
+                    "name": "localeString",
+                    "description": ""
+                }
+            ],
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10817,
+            "description": "Helper to display CVV information",
+            "itemtype": "method",
+            "name": "HiPay.Form.CVVHelpText",
+            "class": "HiPay.Form"
+        },
+        {
+            "file": "dist/hipay-fullservice-sdk-2.js",
+            "line": 10832,
+            "description": "Tokenize form data.",
+            "itemtype": "method",
+            "name": "HiPay.Form.tokenizePaymentFormData",
+            "class": "HiPay.Form"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " dist/hipay-fullservice-sdk-2.js:7979"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " dist/hipay-fullservice-sdk-2.js:9605"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " dist/hipay-fullservice-sdk-2.js:9640"
+        },
+        {
+            "message": "unknown tag: parameter",
+            "line": " dist/hipay-fullservice-sdk-2.js:9738"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " dist/hipay-fullservice-sdk-2.js:10044"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " dist/hipay-fullservice-sdk-2.js:10068"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " dist/hipay-fullservice-sdk-2.js:10180"
+        },
+        {
+            "message": "Missing item type\nCreated by jkurc on 28/07/17.",
+            "line": " dist/hipay-fullservice-sdk-2.js:67"
+        },
+        {
+            "message": "Missing item type\nbluebird build version 3.5.0\nFeatures enabled: core, race, call_get, generators, map, nodeify, promisify, props, reduce, settle, some, using, timers, filter, any, each",
+            "line": " dist/hipay-fullservice-sdk-2.js:997"
+        },
+        {
+            "message": "Missing item type\ndump",
+            "line": " dist/hipay-fullservice-sdk-2.js:7235"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:7979"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:8979"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:8984"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:9025"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:9043"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:9605"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:9640"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:9779"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:9887"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:10009"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:10036"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:10044"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:10059"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:10068"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:10076"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:10180"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:10622"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:10654"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:10674"
+        },
+        {
+            "message": "Missing item type",
+            "line": " dist/hipay-fullservice-sdk-2.js:10807"
+        }
+    ]
+}
