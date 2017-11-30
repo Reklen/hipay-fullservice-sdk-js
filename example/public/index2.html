@@ -9,15 +9,10 @@
 
 
 
-    <link href="./css/example2.css" media="screen" rel="stylesheet" type="text/css">
-    <link href="./css/custom.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="https://s3.eu-central-1.amazonaws.com/b-hipay-sdk-libs/sdkjs/example.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="https://s3.eu-central-1.amazonaws.com/b-hipay-sdk-libs/sdkjs/custom.css" media="screen" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-    <script src="./lib/vendor/node_modules/lt-ie-9/lt-ie-9.min.js"></script>
-    <link href="../assets/old_bws.css" media="screen" rel="stylesheet" type="text/css">
-    <![endif]-->
-    <script type="text/javascript" src="./lib/vendor/hipay/hipay-fullservice-sdk-js/hipay-fullservice-sdk-2.js"></script>
+    <script type="text/javascript" src="https://s3.eu-central-1.amazonaws.com/b-hipay-sdk-libs/sdkjs/hipay-fullservice-sdk-2.js"></script>
 
 </head>
 
@@ -40,6 +35,28 @@
 
 
     <div class="scontainer" id="form">
+        <form method=post action="">
+            <input type=hidden autocomplete=transaction-currency value="CHF">
+            <input type=hidden autocomplete=transaction-amount value="15.00">
+            <p><label>Credit card number: <input type="text" inputmode="numeric" autocomplete="cc-number"></label>
+            <p><label>Expiry Date: <input autocomplete=cc-exp></label>
+            <p><input type=submit value="Continue...">
+        </form>
+
+
+        <form name="my-form-name" id="my-form-id" action="https://my-website.com/cc-submit" method="post">      <label for="frmNameCC">Name on card</label><br>
+            <input name="ccname" id="frmNameCC" required="" autocomplete="cc-name"><br>
+
+            <label for="frmCCNum">Card Number</label><br>
+            <input name="cardnumber" id="frmCCNum" required="" autocomplete="cc-number"><br>
+
+            <label for="frmCCCVC">CVC</label><br>
+            <input name="cvc" id="frmCCCVC" required="" autocomplete="cc-csc"><br>
+
+            <label for="frmCCExp">Expiry</label><br>
+            <input name="cc-exp" id="frmCCExp" required="" placeholder="MM-YYYY" autocomplete="cc-exp"><br><input value="Reset" type="reset"><input value="Submit" type="submit"></form>
+
+
         <form>
             <p class="form-description details">
                 Enter your payment details:
@@ -55,7 +72,7 @@
                 <div class="input-group">
                     <div class="input-group-addon-icon input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
 
-                    <input type="text" class="form-control" id="input-name" autocomplete="cc-name" x-autocompletetype="cc-name" placeholder="" value="" data-hipay-id="card-holder" data-hipay-tabable="true">
+                    <input name="ccname" type="text" class="form-control" id="input-name" autocomplete="cc-name" x-autocompletetype="cc-name" placeholder="" value="" data-hipay-id="card-holder" data-hipay-tabable="true">
                 </div>
 
             </div>
@@ -64,7 +81,8 @@
                 <label class="sr-only" for="input-card">Credit Card Number</label>
                 <div class="input-group">
                     <div class="input-group-addon-icon input-group-addon"><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span></div>
-                    <input type="tel" class="form-control" id="input-card" autocomplete="cc-number" x-autocompletetype="cc-number" placeholder="" pattern="\d*" name="cardNumber" value="" data-hipay-id="card-number" data-hipay-tabable="true">
+                    <!--<input name="cardnumber" type="tel" class="form-control" id="input-card" autocomplete="cc-number" x-autocompletetype="cc-number" placeholder="" value="" data-hipay-id="card-number" data-hipay-tabable="true">-->
+                    <input name="CreditCardNumber" type="number" pattern="([0-9]{5})" inputmode="numeric" class="form-control" id="input-card" autocomplete="cc-number" x-autocompletetype="cc-number" placeholder="" value="" data-hipay-id="card-number" data-hipay-tabable="true">
                 </div>
                 <div id="creditCardNumberMessageContainer" class="inputMessageContainer"></div>
 
@@ -77,7 +95,7 @@
                 <label class="sr-only" for="input-expiry-date">MM / YY</label>
                 <div class="input-group">
                     <div class="input-group-addon-icon input-group-addon"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></div>
-                    <input type="text" class="form-control" id="input-expiry-date" value="" data-hipay-id="card-expiry-date" data-hipay-tabable="true">
+                    <input name="exp-date" type="text" class="form-control" id="input-expiry-date" value="" autocomplete="cc-exp" data-hipay-id="card-expiry-date" data-hipay-tabable="true">
                 </div>
                 <div id="creditCardExpiryDateMessageContainer" class="inputMessageContainer">
 
@@ -90,7 +108,7 @@
                 <label class="sr-only" for="input-cvv">123</label>
                 <div id="container-cvv" class="input-group">
                     <div class="input-group-addon-icon input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
-                    <input class="form-control" id="input-cvv" placeholder="123" maxlength="3" value="" data-hipay-id="card-cvv" data-hipay-tabable="true">
+                    <input name="cvc" class="form-control" id="input-cvv" placeholder="123" maxlength="3" value="" data-hipay-id="card-cvv" data-hipay-tabable="true">
                     <span id="cvv-button" class="input-group-addon"><button id="cvv-modal" type="button" data-toggle="modal" data-target="#cvv-modal">?</button></span>
                 </div>
                 <div id="creditCardCVVMessageContainer" class="inputMessageContainer">
