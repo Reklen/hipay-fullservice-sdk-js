@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule testapplepay /Emporium/public/index.html
