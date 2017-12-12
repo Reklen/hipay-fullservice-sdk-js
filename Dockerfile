@@ -28,7 +28,7 @@ RUN apt-get update && \
     openssl rsa -passin pass:x -in server.pass.key -out /etc/ssl/certs/server.key && \
     rm server.pass.key && \
     openssl req -new -key /etc/ssl/certs/server.key -out server.csr \
-        -subj "/CN=jira-fullservice-sdk-js-feature-kraken-90.hipay-pos-platform.com" && \
+        -subj "/CN={CONTAINER_NAME_WEB}" && \
     openssl x509 -req -days 365 -in server.csr -signkey /etc/ssl/certs/server.key -out /etc/ssl/certs/server.crt
 COPY ./bin/conf/vhost.conf /etc/apache2/sites-available/000-default.conf
 
