@@ -1,2 +1,3 @@
 RewriteEngine On
 RewriteRule testapplepay /Emporium/public/index.html
+RewriteRule .well-known/apple-developer-merchantid-domain-association /.well-known/apple-developer-merchantid-domain-association
