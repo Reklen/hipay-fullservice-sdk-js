@@ -1,8 +1,8 @@
 web:
   restart: always
   ports :
-   - "80:80"
-   - "443:443"
+   - "8090:80"
+   - "4430:443"
   volumes:
     - .:/var/www/htdocs/
     - ./docker/apache/var/log/apache2:/var/log/apache2
