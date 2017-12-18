@@ -73,8 +73,8 @@ app.post('/getApplePaySession', function (req, res) {
 	// Send the request to the Apple Pay server and return the response to the client
 	request(options, function(err, response, body) {
 		if (err) {
-			console.log('Error generating Apple Pay session!');
-			console.log(err, response, body);
+			alert('Error generating Apple Pay session!');
+			alert(err, response, body);
 			res.status(500).send(body);
 		}
 		res.send(body);
