@@ -20,10 +20,10 @@ import request from 'request';
 * See the README for more information.
 */
 const APPLE_PAY_CERTIFICATE_PATH = "./certificates/applePayCert.pem";
-const SSL_CERTIFICATE_PATH = "./certificates/cert.pem";
-const SSL_KEY_PATH = "./certificates/key.pem";
-const MERCHANT_IDENTIFIER = "merchant.com.example";
-const MERCHANT_DOMAIN = "example.com";
+const SSL_CERTIFICATE_PATH = "./certificates/JSKey.crt.pem";
+const SSL_KEY_PATH = "./certificates/JSKey.key.pem";
+const MERCHANT_IDENTIFIER = "merchant.com.hipay.qa";
+const MERCHANT_DOMAIN = "qcm.web-dev-php7.com";
 
 try {
   fs.accessSync(APPLE_PAY_CERTIFICATE_PATH);
