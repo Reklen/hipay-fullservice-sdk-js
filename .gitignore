@@ -21,3 +21,4 @@ docker/apache/var/log/apache2/access\.log
 docker/apache/var/log/apache2/error\.log
 docker/apache/var/log/apache2/other_vhosts_access\.log
 bin/tests/screenshots/
+example/public/Emporium/certificates/
