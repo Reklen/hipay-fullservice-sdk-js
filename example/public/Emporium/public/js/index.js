@@ -81,10 +81,10 @@ function applePayButtonClicked() {
 	* We call our merchant session endpoint, passing the URL to use
 	*/
 	session.onvalidatemerchant = (event) => {
-		console.log("Validate merchant");
+		alert("Validate merchant");
 		const validationURL = event.validationURL;
 		getApplePaySession(event.validationURL).then(function(response) {
-  			console.log(response);
+  			alert(response);
   			session.completeMerchantValidation(response);
 		});
 	};
