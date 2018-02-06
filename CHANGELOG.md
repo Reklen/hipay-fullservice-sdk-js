@@ -1,3 +1,6 @@
+# Version 2.0.0-alpha.10
+Fixes Remove unwanted check on charcode in carholder keypress causing a loop when leaving the card holder field
+
 # Version 2.0.0-alpha.9
 Fixes The SDK isn't working on some old safari version
 

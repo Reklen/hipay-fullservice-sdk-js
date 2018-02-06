@@ -4588,13 +4588,11 @@ var HiPay = (function (HiPay) {
             var evt = e || window.event;
             var charCode = evt.keyCode || evt.which;
 
-            if (charCode == 8 || charCode == 46) {
-                if (evtIsPrintable(evt)) {
-                    if (!evt.ctrlKey) {
-                        evt.preventDefault ? evt.preventDefault() : evt.returnValue = false;
-                        _instanceServiceCreditCard = new _serviceCreditCard();
-                        _instanceServiceCreditCard.initCreditCardHolder(charCode);
-                    }
+            if (evtIsPrintable(evt)) {
+                if (!evt.ctrlKey) {
+                    evt.preventDefault ? evt.preventDefault() : evt.returnValue = false;
+                    _instanceServiceCreditCard = new _serviceCreditCard();
+                    _instanceServiceCreditCard.initCreditCardHolder(charCode);
                 }
             }
 
@@ -4602,7 +4600,7 @@ var HiPay = (function (HiPay) {
         };
         _addFieldListener(_selectElementWithHipayId(_idInputMapper[propt]), 'keypress', cardHolderHandlerKeypress, false);
 
-        var cardNumberHandlerChange = function (e) {
+        var cardHolderHandlerChange = function (e) {
             var evt = e || window.event;
 
             if (!evt.ctrlKey) {
@@ -4614,7 +4612,7 @@ var HiPay = (function (HiPay) {
             _instanceServiceCreditCard.initCreditCardHolder("");
             _callbackEventFormChange();
         };
-        _addFieldListener(_selectElementWithHipayId(_idInputMapper[propt]), 'change', cardNumberHandlerChange, false);
+        _addFieldListener(_selectElementWithHipayId(_idInputMapper[propt]), 'change', cardHolderHandlerChange, false);
 
         _initListenEvent(_idInputMapper[propt]);
     };
