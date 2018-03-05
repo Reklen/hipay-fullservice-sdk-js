@@ -1,7 +1,8 @@
 web:
   container_name: {CONTAINER_NAME_WEB}
   ports:
-    - "{PORT_WEB}:80"
+    - "{PORT_WEB-1}:80"
+    - "{PORT_WEB-2}:443"
   labels:
     - "com.hipay.github={label}"
     - "com.hipay.circleci={circleci}"
