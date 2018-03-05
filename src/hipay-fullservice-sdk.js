@@ -232,24 +232,12 @@ var HiPay = (function (HiPay) {
                     "variable": 4
                 },
                 {
-                    "first": 2221,
-                    "variable": 9
+                    "first": 22,
+                    "variable": 5
                 },
                 {
-                    "first": 2230,
-                    "variable": 10
-                },
-                {
-                    "first": 23,
-                    "variable": 4
-                },
-                {
-                    "first": 2700,
-                    "variable": 10
-                },
-                {
-                    "first": 2710,
-                    "variable": 10
+                    "first": 270,
+                    "variable": 2
                 },
                 {
                     "first": 2720,
