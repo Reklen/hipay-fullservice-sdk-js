@@ -233,27 +233,27 @@ var HiPay = (function (HiPay) {
                 },
                 {
                     "first": 2221,
-                    "variable": 8
+                    "variable": 9
                 },
                 {
                     "first": 2230,
-                    "variable": 9
+                    "variable": 10
                 },
                 {
                     "first": 23,
-                    "variable": 3
+                    "variable": 4
                 },
                 {
                     "first": 2700,
-                    "variable": 9
+                    "variable": 10
                 },
                 {
                     "first": 2710,
-                    "variable": 9
+                    "variable": 10
                 },
                 {
                     "first": 2720,
-                    "variable": 0
+                    "variable": null
                 }
             ],
             "lengths": {
