@@ -2783,28 +2783,16 @@ var HiPay = (function (HiPay) {
                     "variable": 4
                 },
                 {
-                    "first": 2221,
-                    "variable": 8
+                    "first": 22,
+                    "variable": 5
                 },
                 {
-                    "first": 2230,
-                    "variable": 9
-                },
-                {
-                    "first": 23,
-                    "variable": 3
-                },
-                {
-                    "first": 2700,
-                    "variable": 9
-                },
-                {
-                    "first": 2710,
-                    "variable": 9
+                    "first": 270,
+                    "variable": 2
                 },
                 {
                     "first": 2720,
-                    "variable": 0
+                    "variable": null
                 }
             ],
             "lengths": {
