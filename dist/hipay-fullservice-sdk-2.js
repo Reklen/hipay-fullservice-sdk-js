@@ -2780,7 +2780,11 @@ var HiPay = (function (HiPay) {
             "ranges":[
                 {
                     "first": 51,
-                    "variable": 4
+                    "variable": 5
+                },
+                {
+                    "first": 22,
+                    "variable": 6
                 }
             ],
             "lengths": {
