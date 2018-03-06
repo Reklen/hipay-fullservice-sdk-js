@@ -241,7 +241,7 @@ var HiPay = (function (HiPay) {
                 },
                 {
                     "first": 2720,
-                    "variable": 1
+                    "variable": null
                 }
             ],
             "lengths": {
