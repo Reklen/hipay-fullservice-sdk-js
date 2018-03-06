@@ -234,14 +234,6 @@ var HiPay = (function (HiPay) {
                 {
                     "first": 22,
                     "variable": 5
-                },
-                {
-                    "first": 270,
-                    "variable": 2
-                },
-                {
-                    "first": 2720,
-                    "variable": null
                 }
             ],
             "lengths": {
