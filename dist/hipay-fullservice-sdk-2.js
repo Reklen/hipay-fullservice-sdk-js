@@ -2780,10 +2780,10 @@ var HiPay = (function (HiPay) {
             "ranges":[
                 {
                     "first": 51,
-                    "variable": 4
+                    "variable": 5
                 },
                 {
-                    "first": 22,
+                    "first": 21,
                     "variable": 5
                 },
                 {
@@ -2791,8 +2791,8 @@ var HiPay = (function (HiPay) {
                     "variable": 2
                 },
                 {
-                    "first": 2720,
-                    "variable": null
+                    "first": 2719,
+                    "variable": 1
                 }
             ],
             "lengths": {
