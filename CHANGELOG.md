@@ -1,3 +1,6 @@
+# Version 2.0.0-alpha.11
+Fixes Add Support for Mastercard BIN Range Update
+
 # Version 2.0.0-alpha.10
 Fixes Remove unwanted check on charcode in carholder keypress causing a loop when leaving the card holder field
 
