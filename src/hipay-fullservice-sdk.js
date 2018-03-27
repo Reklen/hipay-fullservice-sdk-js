@@ -137,6 +137,7 @@ var HiPay = (function (HiPay) {
             "FORM_CVV_3_HELP_MESSAGE": "For security reasons, you have to enter your card security code (CVC). It's the 3-digits number on the back of your card for VISA®, MASTERCARD® and MAESTRO®.",
             "FORM_CVV_4_HELP_MESSAGE": "For security reasons, you have to enter your card security code (CVC). The AMERICAN EXPRESS security code is the 4-digits number on the front of your card.",
             "FORM_ERROR_INVALID_CARD_HOLDER": "The name field must contain maximum %NUMBER% digits.",
+            "FORM_ERROR_INVALID_CARD_HOLDER_STRING": "The name field must not contain a number.",
             "FORM_ERROR_INVALID_CARD_NUMBER": "Invalid card number.",
             "FORM_ERROR_INVALID_EXPIRY_DATE_PAST": "The expiration date is already past.",
             "FORM_ERROR_INVALID_MONTH_EXPIRY_DATE": "The month field must be between 1 and 12.",
@@ -152,6 +153,7 @@ var HiPay = (function (HiPay) {
             "FORM_CVV_3_HELP_MESSAGE" : "Pour des raisons de sécurité, vous devez indiquer le code de sécurité (CVC). Ce code correspond aux 3 chiffres visibles au verso de votre carte VISA®, MASTERCARD® and MAESTRO®.",
             "FORM_CVV_4_HELP_MESSAGE" : "Pour des raisons de sécurité, vous devez indiquer le code de sécurité (CVC). Le code de securité AMERICAN EXPRESS est un nombre à 4 chiffres au recto de votre carte.",
             "FORM_ERROR_INVALID_CARD_HOLDER": "Le champ nom doit contenir au maximum %NUMBER% caractères.",
+            "FORM_ERROR_INVALID_CARD_HOLDER_STRING": "Le champ nom ne doit pas contenir des chiffres.",
             "FORM_ERROR_INVALID_CARD_NUMBER": "Numéro de carte invalide.",
             "FORM_ERROR_INVALID_EXPIRY_DATE_PAST": "La date est inférieure à la date actuelle.",
             "FORM_ERROR_INVALID_MONTH_EXPIRY_DATE": "Le mois doit être compris entre 1 et 12.",
@@ -942,6 +944,15 @@ var HiPay = (function (HiPay) {
                     return false;
                 }
 
+                var reg = new RegExp('[^A-Za-z]+');
+                if (creditCardHolderString
+                    && reg.test(creditCardHolderString)
+                ) {
+                    validatorCreditCardHolder.errorCollection.push(new _InvalidParametersError(50, _getLocaleTranslationWithId("FORM_ERROR_INVALID_CARD_HOLDER_STRING")));
+
+                    return false;
+                }
+
                 if (creditCardHolderString
                     && creditCardHolderString.length > serviceCreditCard.creditCardHolderLengthMax
                 ) {
@@ -956,7 +967,8 @@ var HiPay = (function (HiPay) {
             validatorCreditCardHolder.isPotentiallyValid = function(creditCardHolderString) {
                 var isPotentiallyValid = false;
 
-                if (creditCardHolderString && creditCardHolderString.length <= serviceCreditCard.creditCardHolderLengthMax ) {
+                var reg = new RegExp('[^A-Za-z]+');
+                if (creditCardHolderString && !reg.test(creditCardHolderString) && creditCardHolderString.length <= serviceCreditCard.creditCardHolderLengthMax ) {
                     isPotentiallyValid = true;
                 }
 
@@ -3024,7 +3036,7 @@ var HiPay = (function (HiPay) {
         if (HiPay.getTarget() == 'test' || HiPay.getTarget() == 'stage' ) {
             endpoint = _endPointAvailablePaymentProducts['stage'];
         } else if (HiPay.getTarget() == 'dev') {
-            endpoint = 'http://localhost:8080/example/dev-api-token.php';
+            endpoint = 'http://localhost:8888/example/dev-api-token.php';
         }
 
         var endpoint2 = endpoint + "?eci=7&customer_country="+_availablePaymentProductsCustomerCountry+"&currency=" + _availablePaymentProductsCurrency;
@@ -3266,7 +3278,7 @@ var HiPay = (function (HiPay) {
             if (HiPay.getTarget() == 'test' || HiPay.getTarget() == 'stage' ) {
                 endpoint = _endPointTokenize['stage'];
             } else if (HiPay.getTarget() == 'dev') {
-                endpoint = 'http://localhost:8080/example/dev-api-token.php';
+                endpoint = 'http://localhost:8888/example/dev-api-token.php';
             }
 
             if (!params['generate_request_id']) {
