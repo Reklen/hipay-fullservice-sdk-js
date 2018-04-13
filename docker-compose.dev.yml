@@ -1,5 +1,4 @@
 web:
-  restart: always
   ports :
    - "8888:80"
   volumes:

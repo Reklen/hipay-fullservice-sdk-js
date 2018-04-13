@@ -944,12 +944,21 @@ var HiPay = (function (HiPay) {
                     return false;
                 }
 
-                var reg = new RegExp('[^A-Za-z]+');
+                var reg = new RegExp('[^A-Za-z0-9 ]+');
+                var count = creditCardHolderString.replace(/\D/g, '').length;
+
                 if (creditCardHolderString
                     && reg.test(creditCardHolderString)
                 ) {
                     validatorCreditCardHolder.errorCollection.push(new _InvalidParametersError(50, _getLocaleTranslationWithId("FORM_ERROR_INVALID_CARD_HOLDER_STRING")));
 
+                    return false;
+                }
+
+                if (creditCardHolderString
+                    && count > 8
+                ) {
+                    validatorCreditCardHolder.errorCollection.push(new _InvalidParametersError(50, _getLocaleTranslationWithId("FORM_ERROR_INVALID_CARD_HOLDER_STRING")));
                     return false;
                 }
 
@@ -967,8 +976,13 @@ var HiPay = (function (HiPay) {
             validatorCreditCardHolder.isPotentiallyValid = function(creditCardHolderString) {
                 var isPotentiallyValid = false;
 
-                var reg = new RegExp('[^A-Za-z]+');
-                if (creditCardHolderString && !reg.test(creditCardHolderString) && creditCardHolderString.length <= serviceCreditCard.creditCardHolderLengthMax ) {
+                var reg = new RegExp('[^A-Za-z0-9 ]+');
+                var count = creditCardHolderString.replace(/\D/g, '').length;
+
+                if (creditCardHolderString
+                    && !reg.test(creditCardHolderString)
+                        && count <= 8
+                            && creditCardHolderString.length <= serviceCreditCard.creditCardHolderLengthMax ) {
                     isPotentiallyValid = true;
                 }
 
