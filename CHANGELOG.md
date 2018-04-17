@@ -1,3 +1,6 @@
+# Version 2.0.1
+Fix init gruntfile
+
 # Version 2.0.0
 New Stable release
 Fix allow space in card holder
