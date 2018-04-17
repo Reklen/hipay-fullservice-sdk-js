@@ -1,3 +1,9 @@
+# Version 2.0.0
+New Stable release
+Fix allow space in card holder
+Fix allow 8 digits in card holder
+Fix setup.sh
+
 # Version 2.0.0-alpha.11
 Fixes Add Support for Mastercard BIN Range Update
 
