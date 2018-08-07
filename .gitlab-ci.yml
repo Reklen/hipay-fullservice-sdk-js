@@ -1,0 +1,88 @@
+image: hipay/gitlab-ci-base:jessie
+
+variables:
+  PROJECT_NAME_TEST:  ${DOCKER_SERVICE}-${CI_COMMIT_REF_SLUG}-${CI_PIPELINE_ID}
+
+stages:
+ - build-test
+ - test
+ - clean-stack
+ - build
+ - deploy
+ - sync
+
+.after_template: &after_template
+  after_script:
+    - docker-compose -p $PROJECT_NAME_TEST -f docker-compose.test.yml stop
+    - docker-compose -p $PROJECT_NAME_TEST -f docker-compose.test.yml rm -fv
+    - docker rmi ${REGISTRY_URL}/${DOCKER_STACK}-${DOCKER_SERVICE}_web:${CI_COMMIT_REF_SLUG}
+    - docker network rm ${PROJECT_NAME_TEST}_sdk-js
+
+build-test:
+  stage: build-test
+  script:
+    - npm install
+    - grunt deploy
+    - docker-compose -p $PROJECT_NAME_TEST -f docker-compose.test.yml build
+  allow_failure: false
+  tags:
+    - pi-commerce-no-overlay
+
+test:
+  stage: test
+  script:
+    - docker-compose -p $PROJECT_NAME_TEST -f docker-compose.test.yml up -d
+    - docker-compose -p $PROJECT_NAME_TEST -f docker-compose.test.yml logs
+    - sleep 60
+    - export BASE_URL=http:\/\/${DOCKER_SERVICE}-${CI_JOB_ID}-web
+    - curl --retry 10 --retry-delay 20 -v http:\/\/${DOCKER_SERVICE}-${CI_JOB_ID}-web
+    - bash setup.sh test
+  <<: *after_template
+  tags:
+    - pi-commerce-no-overlay
+  allow_failure: true
+
+clean-stack-test:
+  stage: clean-stack
+  script:
+    - echo "Clean stack test"
+  <<: *after_template
+  tags:
+    - pi-commerce-no-overlay
+  when: always
+
+build:
+  stage: build
+  script:
+    - npm install
+    - grunt deploy
+    - docker-compose -f docker-compose.acceptance.yml build
+    - docker-compose -f docker-compose.acceptance.yml push
+    - docker rmi ${DOCKER_STACK}-${DOCKER_SERVICE}_web:${CI_COMMIT_REF_SLUG}
+  tags:
+    - pi-commerce-no-overlay
+
+deploy2recette:
+  stage: deploy
+  script:
+    - echo "Deploy from registry"
+      # Substitute env variables which dont exists on the distant machine
+    - sed -i -e "s|\${DOCKER_STACK}|$DOCKER_STACK|g" docker-compose.acceptance.yml
+    - sed -i -e "s|\${DOCKER_SERVICE}|$DOCKER_SERVICE|g" docker-compose.acceptance.yml
+    - sed -i -e "s|\${CI_COMMIT_REF_SLUG}|$CI_COMMIT_REF_SLUG|g" docker-compose.acceptance.yml
+    - sed -i -e "s|\${CI_JOB_ID}|$CI_JOB_ID|g" docker-compose.acceptance.yml
+    - sed -i -e "s|\${REGISTRY_URL}|$REGISTRY_URL|g" docker-compose.acceptance.yml
+      # Change path for relative path to environment files
+      # Push file on distant machine and launch deploy
+    - bash /tools/deployToDockerMachine.sh -s docker-compose.acceptance.yml -n $DOCKER_STACK-$DOCKER_SERVICE-$CI_COMMIT_REF_SLUG
+  allow_failure: false
+  tags:
+    - pi-commerce-no-overlay
+
+sync:
+  stage: sync
+  script:
+  - git clone --mirror https://$GITLAB_USER:$GITLAB_PASSWORD@gitlab.hipay.org/pi-ecommerce/hipay-fullservice-sdk-js.git
+  - cd hipay-fullservice-sdk-js.git
+  - git push --mirror https://$GITHUB_USER:$GITHUB_PASSWORD@github.com/hipay/hipay-fullservice-sdk-js.git
+  allow_failure: true
