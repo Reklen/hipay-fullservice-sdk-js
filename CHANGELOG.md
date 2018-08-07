@@ -1,3 +1,7 @@
+# Version 2.0.2
+Fix process payload mapping after tokenization  
+Migration to gitlab-ci  
+
 # Version 2.0.1
 Fix init gruntfile
 

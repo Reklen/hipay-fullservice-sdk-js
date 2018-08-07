@@ -1,4 +1,7 @@
 web:
+  build: .
+  dockerfile: ./bin/docker/images/sdk-js/Dockerfile
+  container_name: hipay-sdk-js-web
   ports :
    - "8888:80"
   volumes:
