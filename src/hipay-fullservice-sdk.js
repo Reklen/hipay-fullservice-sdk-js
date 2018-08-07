@@ -3213,15 +3213,15 @@ var HiPay = (function (HiPay) {
      */
     _defineProperties(HiPay.Token, {
         'token': {name: 'token'},
-        'requestId': {name: 'request_id'},
+        'request_id': {name: 'request_id'},
         'brand': {name: 'brand'},
         'pan': {name: 'pan'},
-        'cardHolder': {name: 'card_holder'},
-        'cardExpiryMonth': {name: 'card_expiry_month'},
-        'cardExpiryYear': {name: 'card_expiry_year'},
+        'card_holder': {name: 'card_holder'},
+        'card_expiry_month': {name: 'card_expiry_month'},
+        'card_expiry_year': {name: 'card_expiry_year'},
         'issuer': {name: 'issuer'},
         'country': {name: 'country'},
-        'cardType': {name: 'card_type'}
+        'card_type': {name: 'card_type'}
     });
 
     _defineProperties(_APIError, {
