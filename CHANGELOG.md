@@ -1,3 +1,6 @@
+# Version 2.0.2
+Fix process payload mapping after tokenization
+
 # Version 2.0.1
 Fix init gruntfile
 
