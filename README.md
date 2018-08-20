@@ -4,9 +4,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/hipay/hipay-fullservice-sdk-js/master/LICENSE.md)
 [![Packagist](https://img.shields.io/packagist/v/hipay/hipay-enterprise-sdk-js.svg)](https://packagist.org/packages/hipay/hipay-enterprise-sdk-js#dev-master)
-[![Bower version](https://img.shields.io/bower/v/hipay-fullservice-sdk-js.svg)](https://github.com/hipay/hipay-fullservice-sdk-js)
-[![Bower pre version](https://img.shields.io/bower/vpre/hipay-fullservice-sdk-js.svg)](https://github.com/hipay/hipay-fullservice-sdk-js)
-[![CircleCI](https://circleci.com/gh/hipay/hipay-fullservice-sdk-js/tree/master.svg?style=svg)](https://circleci.com/gh/hipay/hipay-fullservice-sdk-js/tree/master)
+[![NPM version](https://img.shields.io/npm/v/hipay-fullservice-sdk-js.svg)](https://github.com/hipay/hipay-fullservice-sdk-js)
 
 
 The HiPay Fullservice SDK for JavaScript allows you to tokenize credit or debit cards against the HiPay Fullservice payment platform, directly from the web browser. This method (called Direct Post in the PCI council terminology) allows you to offer a unfied payment workflow to your customers while remaining PCI compliant.
@@ -36,7 +34,7 @@ Read the **[project documentation][doc-home]** for comprehensive information abo
 
 The **HiPay Fullservice SDK for JavaScript** is available under the **Apache 2.0 License**. Check out the [license file][project-license] for more information.
 
-[doc-home]: https://developer.hipay.com/doc/hipay-fullservice-sdk-js/
+[doc-home]: https://developer.hipay.com/doc/hipay-enterprise-sdk-js_2/
 [hipay-help]: http://help.hipay.com
 [project-issues]: https://github.com/hipay/hipay-fullservice-sdk-js/issues
 [project-license]: LICENSE.md
